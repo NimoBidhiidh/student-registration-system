@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new student</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="col-md-12">
+
+<h3>Registor new student</h3>
+
+
+<form action="{{ url_for('newStudnet', stid=stid )}}" method = 'POST'>
+  <div class="form-group">
+    
+    <label>stid</label>
+    <input name="stid" class="form-control">
+  </div>
+
+<div class="form-group">
+    
+    <label>FName</label>
+    <input name="fname" class="form-control">
+  </div>
+<div class="form-group">
+    
+    <label>MName</label>
+    <input name="mname" class="form-control">
+  </div>
+
+  <div class="form-group">
+    
+    <label>LName</label>
+    <input name="lname" class="form-control">
+  </div>
+  
+<div class="form-group">
+    
+    <label>dcode</label>
+    <select name="dcode" class="form-control">
+      <option name="dcode" >ap</option>
+      <option name="dcode" >cs</option>
+      <option name="dcode">eg</option>
+      <option name="dcode">eng</option>
+      <option name="dcode">is</option>
+      <option name="dcode">it</option>
+      <option name="dcode">med</option>
+      <option name="dcode">se</option>
+    </select>
+  </div>
+
+	
+            
+    <div class="form-group">
+    <label>gender</label>
+    <select name="gender" class="form-control">
+      
+      <option>Female</option>
+      <option>Male</option>
+    </select>
+  </div>
+
+
+<button  type='submit'class="btn btn-primary"> add</button>
+</form>
+
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+{% endblock %}

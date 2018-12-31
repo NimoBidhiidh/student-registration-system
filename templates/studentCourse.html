@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>studentslist</title>
+</head>
+<body>
+
+	<div class="container">
+  <div class="col-md-12">
+
+  	
+	<ul class="list-group">
+{% for i in item %}
+
+	<li class="list-group-item">{{ i.stid }} &nbsp &nbsp{{ i.cNo }} &nbsp &nbsp{{ i.dateTaken }} &nbsp &nbsp{{ i.marks }} 
+		<a class="badge badge-light"  href='{{url_for('editStudnet',stid = i.stid)}}' >Edit</a>
+		<a class="badge badge-danger" href='{{url_for('delStudnet', stid = i.stid)}}' >
+	Delete</a>
+	</li>
+
+{% endfor %}
+	</ul>
+</div>
+</div>
+
+</body>
+</html>
+{% endblock %}
